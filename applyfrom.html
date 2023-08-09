@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages | Firebase</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+    <h1>Learner Registration Form</h1>
+  <form action="submit.php" method="post">
+    <div class="form-group">
+      <label for="initials">Initials and Surname:</label>
+      <input type="text" class="form-control" id="initials" name="initials" required>
+    </div>
+    <div class="form-group">
+      <label for="full_name">Student Full Name:</label>
+      <input type="text" class="form-control" id="full_name" name="full_name" required>
+    </div>
+    <div class="form-group">
+      <label for="id_number">Identity Number (ID) or Passport Number:</label>
+      <input type="text" class="form-control" id="id_number" name="id_number" required>
+    </div>
+    <div class="form-group">
+      <label for="cell_phone">Cell Phone:</label>
+      <input type="text" class="form-control" id="cell_phone" name="cell_phone" required>
+    </div>
+    <div class="form-group">
+      <label for="home_address">Home Adress:</label>
+      <input type="text" class="form-control" id="home_address" name="home_address" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <h2>Parents or Guardian Details</h2>
+    <div class="form-group">
+      <label for="parent_initials">Initials:</label>
+      <input type="text" class="form-control" id="parent_initials" name="parent_initials" required>
+    </div>
+    <div class="form-group">
+      <label for="parent_full_name">Full Names:</label>
+      <input type="text" class="form-control" id="parent_full_name" name="parent_full_name" required>
+    </div>
+    <div class="form-group">
+      <label for="parent_id_number">Identity Number (ID) or Passport Number:</label>
+      <input type="text" class="form-control" id="parent_id_number" name="parent_id_number" required>
+    </div>
+    <div class="form-group">
+      <label for="parent_cellphone">Cellphone:</label>
+      <input type="text" class="form-control" id="parent_cellphone" name="parent_cellphone" required>
+    </div>
+    <div class="form-group">
+      <label for="parent_alternative_number">Alternative Number:</label>
+      <input type="text" class="form-control" id="parent_alternative_number" name="parent_alternative_number">
+    </div>
+    <div class="form-group">
+      <label for="parent_email">Email:</label>
+      <input type="email" class="form-control" id="parent_email" name="parent_email">
+    </div>
+    <h2>Subject Registration</h2>
+    <div class="form-group">
+      <label for="subjects">Any four subjects of your choice.</label>
+      <select class="form-control" id="subjects" name="subjects" multiple>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Mathematics Literacy">Mathematics Literacy</option>
+        <option value="Physical Sciences">Physical Sciences</option>
+        <option value="Accounting">Accounting</option>
+        <option value="Business Studies">Business Studies</option>
+        <option value="Life Sciences">Life Sciences</option>
+        <option value="Geography">Geography</option>
+        <option value="Economics">Economics</option>
+        <option value="English (Only for grade 8 and 9)"></option>
+      </label>
+    </select>
+</div>
+        <div class="form-group">
+            <label for="subjects">Any four subjects of your choice.</label>
+            <select class="form-control" id="subjects" name="subjects[]" multiple>
+              <optgroup label="Mathematics">
+                <option value="Mathematics">Mathematics</option>
+                <option value="Mathematics Literacy">Mathematics Literacy</option>
+              </optgroup>
+              <optgroup label="Science">
+                <option value="Physical Sciences">Physical Sciences</option>
+                <option value="Life Sciences">Life Sciences</option>
+              </optgroup>
+              <optgroup label="Business">
+                <option value="Accounting">Accounting</option>
+                <option value="Business Studies">Business Studies</option>
+              </optgroup>
+              <optgroup label="Others">
+                <option value="Geography">Geography</option>
+                <option value="Economics">Economics</option>
+                <option value="English (Only for grade 8 and 9)">English (Only for grade 8 and 9)</option>
+              </optgroup>
+            </select>
+          </div>
+          
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="assets/js/test.js"></script>
+</body>
+
+</html>
